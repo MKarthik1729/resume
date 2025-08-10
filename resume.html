@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karthik M - Full Stack Developer Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #2c3e50;
+            padding-bottom: 15px;
+            position: relative;
+        }
+
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: #3498db;
+        }
+
+        .name {
+            font-size: 2.2em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .contact_info {
+            font-size: 1em;
+            color: #555;
+            margin-bottom: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .contact_info a {
+            color: #3498db;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .contact_info a:hover {
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+            box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
+        }
+
+        .contact_info a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #3498db;
+            transition: width 0.3s ease;
+        }
+
+        .contact_info a:hover::before {
+            width: 100%;
+        }
+
+        .contact_separator {
+            color: #bdc3c7;
+            font-weight: 300;
+        }
+
+        .contact_info span:first-child {
+            margin-right: 5px;
+            font-size: 0.9em;
+        }
+
+        /* Focus styles for accessibility */
+        .contact_info a:focus {
+            outline: 2px solid #3498db;
+            outline-offset: 2px;
+        }
+
+        /* Print optimization */
+        @media print {
+            .contact_info a:hover {
+                background: transparent;
+                color: #3498db;
+                transform: none;
+                box-shadow: none;
+            }
+            
+            .contact_info a::before {
+                display: none;
+            }
+        }
+
+        .section {
+            margin-bottom: 12px;
+        }
+
+        .section_title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 4px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .summary {
+            font-size: 1em;
+            line-height: 1.6;
+            text-align: justify;
+            font-weight: 500;
+        }
+
+        .highlights_list {
+            margin-bottom: 8px;
+        }
+
+        .highlight_item {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 6px;
+            line-height: 1.4;
+        }
+
+        .highlight_bullet {
+            color: #3498db;
+            font-weight: bold;
+            font-size: 1.1em;
+            min-width: 12px;
+            margin-top: 1px;
+        }
+
+        .highlight_text {
+            color: #2c3e50;
+            font-size: 0.95em;
+            font-weight: 500;
+        }
+
+        .education_item {
+            margin-bottom: 12px;
+        }
+
+        .education_header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3px;
+        }
+
+        .institution {
+            font-weight: bold;
+            font-size: 1em;
+            color: #2c3e50;
+        }
+
+        .date {
+            color: #7f8c8d;
+            font-weight: 500;
+        }
+
+        .degree {
+            font-style: italic;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .experience_item {
+            margin-bottom: 12px;
+        }
+
+        .job_header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 6px;
+        }
+
+        .job_title {
+            font-weight: bold;
+            font-size: 1em;
+            color: #2c3e50;
+        }
+
+        .company {
+            font-weight: 500;
+            color: #3498db;
+        }
+
+        .location {
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+
+        .job_description {
+            margin-left: 0;
+        }
+
+        .job_description li {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 6px;
+            line-height: 1.4;
+            list-style: none;
+        }
+
+        .job_description li {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 6px;
+            line-height: 1.4;
+            list-style: none;
+            font-weight: 500;
+            color: #2c3e50;
+            font-size: 0.95em;
+        }
+
+        .job_description li::before {
+            content: '•';
+            color: #3498db;
+            font-weight: bold;
+            font-size: 1.1em;
+            min-width: 12px;
+            margin-top: 1px;
+        }
+
+        .projects_grid {
+            display: grid;
+            gap: 12px;
+        }
+
+        .project_item {
+            border-left: 3px solid #3498db;
+            padding-left: 12px;
+            margin-bottom: 8px;
+        }
+
+        .project_title {
+            font-weight: bold;
+            font-size: 1em;
+            color: #2c3e50;
+            margin-bottom: 3px;
+        }
+
+        .project_tech {
+            color: #7f8c8d;
+            font-size: 0.85em;
+            margin-bottom: 6px;
+        }
+
+        .project_description {
+            margin-left: 0;
+        }
+
+        .project_description li {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 6px;
+            line-height: 1.4;
+            list-style: none;
+        }
+
+        .project_description li {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 6px;
+            line-height: 1.4;
+            list-style: none;
+            font-weight: 500;
+            color: #2c3e50;
+            font-size: 0.95em;
+        }
+
+        .project_description li::before {
+            content: '•';
+            color: #3498db;
+            font-weight: bold;
+            font-size: 1.1em;
+            min-width: 12px;
+            margin-top: 1px;
+        }
+
+        .skills_grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill_category {
+            flex: 1;
+            min-width: 300px;
+            /* margin-bottom: 12px; */
+        }
+
+        .skill_title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 3px;
+        }
+
+        .skill_list {
+            color: #555;
+            line-height: 1.4;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                margin-bottom: 18px;
+                padding-bottom: 12px;
+            }
+            
+            .name {
+                font-size: 1.8em;
+                letter-spacing: 0.5px;
+            }
+            
+            .contact_info {
+                flex-direction: column;
+                gap: 6px;
+                font-size: 0.95em;
+            }
+            
+            .contact_separator {
+                display: none;
+            }
+            
+            .contact_info a {
+                padding: 6px 10px;
+                border: 1px solid #e0e0e0;
+                border-radius: 6px;
+                background: #f8f9fa;
+            }
+
+            .highlight_item {
+                margin-bottom: 5px;
+            }
+
+            .highlight_text {
+                font-size: 0.9em;
+            }
+        }
+
+        @media print {
+            body {
+                padding: 12px;
+                font-size: 11px;
+            }
+            
+            .name {
+                font-size: 1.8em;
+            }
+            
+            .contact_info {
+                display: flex !important;
+                flex-direction: row !important;
+                flex-wrap: wrap !important;
+                justify-content: center !important;
+                gap: 8px !important;
+                align-items: center !important;
+                font-size: 0.85em;
+            }
+            
+            .contact_separator {
+                display: inline !important;
+            }
+            
+            .contact_info a {
+                padding: 1px 4px !important;
+                background: transparent !important;
+                color: #3498db !important;
+                transform: none !important;
+                box-shadow: none !important;
+                border: none !important;
+            }
+            
+            .contact_info a:hover {
+                background: transparent !important;
+                color: #3498db !important;
+                transform: none !important;
+                box-shadow: none !important;
+            }
+            
+            .contact_info a::before {
+                display: none !important;
+            }
+            
+            .section_title {
+                font-size: 1.1em;
+            }
+
+            .highlight_item {
+                margin-bottom: 4px !important;
+            }
+
+            .highlight_text {
+                font-size: 0.85em !important;
+            }
+            
+            .page-break {
+                page-break-before: always;
+            }
+            
+            .no-break {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1 class="name">Karthik M</h1>
+        <div class="contact_info">
+            <a href="tel:+917671859776" title="Call me">
+                <span>📞</span> +91 7671859776
+            </a>
+            <span class="contact_separator">•</span>
+            <a href="mailto:mkarthik1729@gmail.com" title="Email me">
+                <span>✉️</span> mkarthik1729@gmail.com
+            </a>
+            <span class="contact_separator">•</span>
+            <a href="https://github.com/MKarthik1729" target="_blank" title="GitHub Profile">
+                <span>🐙</span> github.com/MKarthik1729
+            </a>
+            <span class="contact_separator">•</span>
+            <a href="https://linkedin.com/in/m-karthik1729" target="_blank" title="LinkedIn Profile">
+                <span>💼</span> linkedin.com/in/m-karthik1729
+            </a>
+        </div>
+    </header>
+
+    <div class="section">
+        <div class="section_title">Professional Summary</div>
+        <div class="summary">
+            Full Stack Developer with AI/ML specialization from IIIT Sricity, combining Python expertise in machine learning pipelines, data science, and modern web development. 
+            Experienced in building scalable applications using React, Node.js, and Python frameworks with real-time features and CI/CD implementation. 
+            Strong problem-solving abilities with 150+ LeetCode solutions, proficient in cloud deployment, database management, and agile methodologies.
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section_title">Key Highlights</div>
+        <div class="highlights_list">
+            <div class="highlight_item">
+                <span class="highlight_bullet">•</span>
+                <span class="highlight_text">Full Stack Developer with experience in React, React Native, Node.js, and GraphQL</span>
+            </div>
+            <div class="highlight_item">
+                <span class="highlight_bullet">•</span>
+                <span class="highlight_text">AI/ML Specialization from IIIT Sricity with knowledge of Pandas, NumPy, Scikit-learn, and TensorFlow</span>
+            </div>
+            <div class="highlight_item">
+                <span class="highlight_bullet">•</span>
+                <span class="highlight_text">Completed courses in AI, Machine Learning, and Deep Learning fundamentals</span>
+            </div>
+            <div class="highlight_item">
+                <span class="highlight_bullet">•</span>
+                <span class="highlight_text">Worked with ML models including Linear/Nonlinear Regression, Decision Trees, KNN, and basic Neural Networks</span>
+            </div>
+            <div class="highlight_item">
+                <span class="highlight_bullet">•</span>
+                <span class="highlight_text">Built and deployed ML pipeline with FastAPI and React achieving good accuracy</span>
+            </div>
+            <div class="highlight_item">
+                <span class="highlight_bullet">•</span>
+                <span class="highlight_text">Developed applications using WebSocket, Redis, and GraphQL APIs</span>
+            </div>
+            <div class="highlight_item">
+                <span class="highlight_bullet">•</span>
+                <span class="highlight_text">Familiar with cloud deployment (AWS), Docker, and CI/CD practices</span>
+            </div>
+            <div class="highlight_item">
+                <span class="highlight_bullet">•</span>
+                <span class="highlight_text">Experience with PostgreSQL, MongoDB, and state management in Zustand</span>
+            </div>
+            <div class="highlight_item">
+                <span class="highlight_bullet">•</span>
+                <span class="highlight_text">Solved 150+ LeetCode problems demonstrating problem-solving and algorithmic skills</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section_title">Skills</div>
+        <div class="skills_grid">
+            <div class="skill_category">
+                <div class="skill_title">Programming Languages</div>
+                <div class="skill_list">JavaScript, TypeScript, Python, SQL, HTML5/CSS3</div>
+            </div>
+            
+            <div class="skill_category">
+                <div class="skill_title">Frontend</div>
+                <div class="skill_list">React.js, React Native, Context API, Tailwind CSS, Framer Motion, Material-UI, Zustand</div>
+            </div>
+            
+            <div class="skill_category">
+                <div class="skill_title">Backend</div>
+                <div class="skill_list">Node.js, Express.js, FastAPI, RESTful APIs, GraphQL</div>
+            </div>
+            
+            <div class="skill_category">
+                <div class="skill_title">Database</div>
+                <div class="skill_list">MongoDB, PostgreSQL, MySQL</div>
+            </div>
+            
+            <div class="skill_category">
+                <div class="skill_title">Python Modules & Libraries</div>
+                <div class="skill_list">Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn, TensorFlow, Keras, Jupyter Notebooks, DVC, MLflow</div>
+            </div>
+            
+            <div class="skill_category">
+                <div class="skill_title">AI/ML Skills & Concepts</div>
+                <div class="skill_list">Ensemble Learning, Hyperparameter Tuning, Feature Engineering, Model Deployment, ML Pipelines, Basic MLOps</div>
+            </div>
+            
+            <div class="skill_category">
+                <div class="skill_title">DevOps & Tools</div>
+                <div class="skill_list">Git, Docker, AWS (S3), CI/CD, GitHub Actions</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section_title">Education</div>
+        <div class="education_item">
+            <div class="education_header">
+                <div class="institution">Indian Institute of Information Technology, Sricity</div>
+                <div class="date">2020 – 2024</div>
+            </div>
+            <div class="degree">Bachelor of Technology in Computer Science and Engineering</div>
+            <div class="degree">Specialization in AI/ML</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section_title">Experience</div>
+        
+        <div class="experience_item">
+            <div class="job_header">
+                <div>
+                    <div class="job_title">Full Stack Engineer</div>
+                    <div class="company">21n</div>
+                </div>
+                <div>
+                    <div class="date">Mar 2025 – June 2025</div>
+                    <div class="location">Hyderabad, India</div>
+                </div>
+            </div>
+            <ul class="job_description">
+                <li>Developed React Native mobile apps with Zustand state management and Node.js/Express.js backend services</li>
+                <li>Built RESTful APIs and GraphQL endpoints for frontend-backend communication</li>
+                <li>Managed PostgreSQL database schemas and implemented GraphQL APIs for optimized data fetching</li>
+                <li>Integrated Google Maps SDK for location-based features and search functionality</li>
+                <li>Contributed to homepage development with UI/UX best practices and responsive design</li>
+                <li>Collaborated in agile environment with code reviews and feature delivery</li>
+            </ul>
+        </div>
+
+        <div class="experience_item">
+            <div class="job_header">
+                <div>
+                    <div class="job_title">Freelance Web Developer</div>
+                    <div class="company">Sriveluenterprises</div>
+                </div>
+                <div>
+                    <div class="date">July 2024 – Sep 2024</div>
+                    <div class="location">Remote</div>
+                </div>
+            </div>
+            <ul class="job_description">
+                <li>Built responsive corporate website using React.js with component-based architecture and custom hooks</li>
+                <li>Implemented Framer Motion animations and micro-interactions for enhanced user experience</li>
+                <li>Used SASS/SCSS with variables and mixins for consistent design system across pages</li>
+                <li>Developed dynamic components with React Hooks and Context API for state management</li>
+                <li>Optimized performance through code splitting, lazy loading, and responsive design with CSS Grid/Flexbox</li>
+                <li>Delivered client satisfaction through iterative improvements based on feedback</li>
+            </ul>
+        </div>
+
+        <div class="experience_item">
+            <div class="job_header">
+                <div>
+                    <div class="job_title">Trainee Machine Learning Engineer</div>
+                    <div class="company">Technocolabs Software Pvt Ltd</div>
+                </div>
+                <div>
+                    <div class="date">Feb 2024 – Jun 2024</div>
+                    <div class="location">Remote</div>
+                </div>
+            </div>
+            <ul class="job_description">
+                <li>Developed ML pipeline with binary/multiclass classification models using ensemble learning and hyperparameter tuning</li>
+                <li>Built FastAPI RESTful endpoints with documentation for model inference and predictions</li>
+                <li>Created React-based UI with data visualization and interactive dashboards</li>
+                <li>Implemented data preprocessing, feature engineering, and model training pipelines using Docker</li>
+                <li>Set up CI/CD pipeline for automated testing and deployment with data security measures</li>
+                <li>Optimized model performance through cross-validation, feature selection, and ensemble methods</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section_title">Projects</div>
+        <div class="projects_grid">
+            
+            <!-- <div class="project_item">
+                <div class="project_title">Interactive Portfolio Website</div>
+                <div class="project_tech">React, Framer Motion, Tailwind CSS, Vite | Dec 2024</div>
+                <ul class="project_description">
+                    <li>Crafted a responsive portfolio website with advanced animations using Framer Motion, achieving 95+ Lighthouse performance score</li>
+                    <li>Established state management and dynamic theme switching using React Context API with persistent user preferences</li>
+                    <li>Enhanced website performance through code splitting, lazy loading, and implementing modern web vitals best practices</li>
+                    <li>Configured CI/CD pipeline using GitHub Actions for automated testing and deployment</li>
+                </ul>
+            </div> -->
+
+            <div class="project_item">
+                <div class="project_title">Art to Heart: Art Auctioning Platform</div>
+                <div class="project_tech">React.js, Node.js, MongoDB, Redis, Docker, AWS | Dec 2022</div>
+                <ul class="project_description">
+                    <li>Built a full-stack art auctioning platform with real-time bidding functionality</li>
+                    <li>Used Docker containers for deployment and deployed on AWS EC2 instances</li>
+                    <li>Implemented real-time bidding system using Redis for caching and WebSocket for live updates</li>
+                    <li>Added JWT authentication for user security</li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+</html>

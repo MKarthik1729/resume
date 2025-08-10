@@ -1,0 +1,54 @@
+I +91 7671859776 | # mkarthik1729@gmail.com
+Karthik M
+| § github.com/MKarthik1729 | ï linkedin.com/in/m-karthik1729
+Professional Summary
+Skilled Full Stack Developer specializing in front-end development with React, React-Native, and TypeScript. Experienced in
+building responsive web applications, implementing modern UI/UX practices, and optimizing application performance. Strong
+background in RESTful API integration, state management, and cloud deployment. Passionate about creating clean, maintainable
+code and delivering exceptional user experiences.
+Education
+Indian Institute of Information Technology, Sricity 2020 – 2024
+Bachelor of Technology in Computer Science and Engineering Specialization in AI/ML
+Experience
+Full Stack Engineer Mar 2025 – June 2025
+21n Hyderabad, India
+• Designed and deployed advanced search functionality and location-based features in React Native mobile app using Google
+Maps SDK, Redux for state management, and React Navigation for seamless user experience
+• Led homepage development initiatives, incorporating modern UI/UX practices and responsive design principles
+Freelance Web Developer July 2024 – Sep 2024
+Srivelu Enterprises Remote
+• Created and deployed a modern, responsive corporate website using React.js, incorporating best practices in front-end
+development
+• Built dynamic components and interactive features using React Hooks and Context API, boosting user engagement
+• Earned exceptional client feedback and secured additional project opportunities through demonstrated technical expertise
+Trainee Machine Learning Engineer Feb 2024 – Jun 2024
+Technocolabs Software Pvt Ltd Remote
+• Created and deployed an end-to-end ML pipeline integrating binary and multiclass classification models with 93% accuracy
+• Built and documented RESTful API endpoints using FastAPI, enabling seamless model inference and integration
+• Constructed a responsive React-based user interface with TypeScript, implementing real-time data visualization and user
+feedback
+• Established robust data security measures and ensured compliance with industry standards for handling sensitive
+information
+Projects
+Interactive Portfolio Website | React, Framer Motion, Tailwind CSS, TypeScript, Vite Dec 2024
+• Crafted a responsive portfolio website with advanced animations using Framer Motion, achieving 95+ Lighthouse
+performance score
+• Established state management and dynamic theme switching using React Context API with persistent user preferences
+• Enhanced website performance through code splitting, lazy loading, and implementing modern web vitals best practices
+• Configured CI/CD pipeline using GitHub Actions for automated testing and deployment
+Art to Heart: Art Auctioning Platform | React.js, Node.js, MongoDB, Redis, Docker, AWS Dec 2022
+• Designed and built a scalable full-stack art auctioning platform with real-time bidding functionality
+• Established microservices architecture using Docker containers and orchestrated deployment on AWS EC2 instances
+• Created real-time bidding system using Redis pub/sub for caching and WebSocket for live updates
+• Integrated secure payment gateway and implemented JWT authentication for enhanced security
+Integrated ML Pipeline System | Python, Scikit-learn, React, FastAPI, Docker, CI/CD Feb 2024
+• Constructed a production-grade ML pipeline with automated data preprocessing, feature engineering, and model training
+• Containerized the application using Docker and established CI/CD pipeline for automated testing and deployment
+• Built RESTful API endpoints using FastAPI with comprehensive API documentation and automated testing
+• Achieved 93.34% training accuracy and 93.27% test accuracy through ensemble learning and hyperparameter optimization
+Skills
+Programming Languages: JavaScript, TypeScript, Python, SQL, HTML5/CSS3, Java
+Frontend: React.js, React Native, Svelte, Redux, Context API, Tailwind CSS, Framer Motion, Material-UI, Zustand
+Backend: Node.js, Express.js, Django, FastAPI, RESTful APIs, GraphQL
+Database: MongoDB, PostgreSQL, Redis, MySQL, Firebase
+DevOps & Tools: Git, Docker, AWS (S3), CI/CD, GitHub Actions

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav_logo">Portfolio</div>
+            <ul class="nav_menu">
+                <li><a href="#home" class="nav_link">Home</a></li>
+                <li><a href="#about" class="nav_link">About</a></li>
+                <li><a href="#projects" class="nav_link">Projects</a></li>
+                <li><a href="#contact" class="nav_link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero_section">
+            <div class="hero_content">
+                <h1 class="hero_title">Welcome to My Portfolio</h1>
+                <p class="hero_description">I'm a passionate developer creating amazing digital experiences</p>
+                <button class="cta_button" id="cta_button">Get Started</button>
+            </div>
+        </section>
+
+        <section id="about" class="about_section">
+            <h2 class="section_title">About Me</h2>
+            <div class="about_content">
+                <p>I'm a dedicated developer with expertise in modern web technologies. I love creating user-friendly applications that solve real-world problems.</p>
+            </div>
+        </section>
+
+        <section id="projects" class="projects_section">
+            <h2 class="section_title">My Projects</h2>
+            <div class="projects_grid" id="projects_grid">
+                <!-- Projects will be dynamically added here -->
+            </div>
+        </section>
+
+        <section id="contact" class="contact_section">
+            <h2 class="section_title">Contact Me</h2>
+            <form class="contact_form" id="contact_form">
+                <input type="text" placeholder="Your Name" class="form_input" required>
+                <input type="email" placeholder="Your Email" class="form_input" required>
+                <textarea placeholder="Your Message" class="form_textarea" required></textarea>
+                <button type="submit" class="submit_button">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
